@@ -7,7 +7,7 @@ class ContextBuilder:
     def __init__(self, registry):
         self.registry = registry
     
-    def build(self, history, current_agent, system_prompt, include_silent=False, max_messages=None, prepend_system=True):
+    def build(self, history, current_agent, system_prompt=None, include_silent=False, max_messages=None, prepend_system=True):
         """
         Build context for a single agent.
         Returns list of {"role": str, "content": str} for LLM API.
